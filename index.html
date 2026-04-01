@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SITCON Camp 2026</title>
+  <meta name="description" content="SITCON Camp 2026 今夏正式舉辦！7/8–7/12 於國立陽明交通大學，現在招募工作人員，快來跳坑！" />
+  <meta property="og:title" content="SITCON Camp 2026" />
+  <meta property="og:description" content="今夏，我們在陽明交通大學等你。7/8–7/12，五天四夜。" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-sitcon">SITCON</span>
+        <span class="logo-camp">Camp</span>
+        <span class="logo-year">2026</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="開啟選單">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">關於</a></li>
+        <li><a href="#recruit">加入工作人員</a></li>
+        <li><a href="#timeline">時程</a></li>
+        <li><a href="#team">工作人員</a></li>
+        <li>
+          <button class="theme-toggle" id="themeToggle" aria-label="切換深色/淺色模式">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </li>
+        <li>
+          <a href="https://i.sitcon.org/camp-recruit" target="_blank" rel="noopener" class="nav-cta">
+            立即跳坑 →
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <canvas id="starCanvas"></canvas>
+    <div class="hero-decade" aria-hidden="true">10</div>
+    <div class="hero-content">
+      <div class="hero-badge hero-badge-gold reveal">
+        <span class="badge-star">✦</span>第十屆&ensp;·&ensp;十週年
+      </div>
+      <h1 class="hero-title reveal">
+        <span class="title-sitcon">SITCON</span>
+        <span class="title-camp">Camp</span>
+        <span class="title-year">2026</span>
+      </h1>
+      <div class="hero-sub-badge reveal">
+        <span class="badge-dot"></span>今夏，我們回來了
+      </div>
+      <p class="hero-tagline reveal">課程主題 <span class="tbd">快了快了⋯</span></p>
+      <div class="hero-meta reveal">
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>7 月 8 日 – 12 日</span>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>國立陽明交通大學</span>
+        </div>
+      </div>
+      <div class="hero-actions reveal">
+        <a href="https://i.sitcon.org/camp-recruit" target="_blank" rel="noopener" class="btn-primary">
+          <span>工人跳坑表單</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#about" class="btn-ghost">了解更多</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label reveal">// about</div>
+      <h2 class="section-title reveal">什麼是 SITCON Camp？</h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            SITCON Camp 是一個由學生辦、給學生玩的資訊科技夏令營。
+            不是培訓班，也不是補習班——是一群熱愛資訊的人，
+            花五天四夜聚在一起，一起學、一起玩、一起搞事的地方。
+          </p>
+          <p>
+            <strong class="text-gold">2026 年是第十屆。</strong>
+            十年前有人決定把這件事做起來；十年後，我們還在這裡。
+            這次落腳 <strong>國立陽明交通大學</strong>，
+            從 <strong>7 月 8 日</strong> 搞到 <strong>7 月 12 日</strong>。
+          </p>
+          <p>
+            課程主題還在保密中，但這一屆，不一樣。
+          </p>
+        </div>
+        <div class="about-pills reveal">
+          <div class="about-pill pill-cyan">🗓️ 7/8 – 7/12</div>
+          <div class="about-pill pill-purple">📍 國立陽明交通大學</div>
+          <div class="about-pill pill-green">⏱️ 五天四夜</div>
+          <div class="about-pill pill-orange">🔥 招募中</div>
+          <div class="about-pill pill-gold">🎊 第十屆</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recruit Section -->
+  <section id="recruit">
+    <div class="container">
+      <div class="section-label reveal">// join us</div>
+      <h2 class="section-title reveal">一起來搞事</h2>
+      <p class="section-desc reveal">
+        SITCON Camp 2026 工作人員招募中！<br />
+        不管你會什麼，這裡都需要你。
+      </p>
+
+      <div class="recruit-cta-banner reveal">
+        <div class="banner-text">
+          <span class="banner-label">跳坑中</span>
+          <span>表單已開，手不要太慢 👇</span>
+        </div>
+        <a href="https://i.sitcon.org/camp-recruit" target="_blank" rel="noopener" class="btn-primary">
+          <span>我要跳坑</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="positions-grid">
+        <div class="position-card reveal" data-group="admin">
+          <div class="pos-icon">🗂️</div>
+          <div class="pos-info">
+            <h3>行政組</h3>
+            <p>人員管理、住宿安排、保險交通協助、感謝函、慶功宴、報名相關事務</p>
+            <div class="pos-tags">
+              <span class="tag">細心負責</span>
+              <span class="tag">主動溝通</span>
+            </div>
+          </div>
+          <div class="pos-count"><span>1</span>人</div>
+        </div>
+
+        <div class="position-card reveal" data-group="mentor">
+          <div class="pos-icon">🧑‍🏫</div>
+          <div class="pos-info">
+            <h3>隊輔組</h3>
+            <p>陪伴學員日常、協助解決技術問題、帶動課程與闖關活動、培育領導力</p>
+            <div class="pos-tags">
+              <span class="tag">熱情耐心</span>
+              <span class="tag">IT 相關</span>
+              <span class="tag">帶隊經驗佳</span>
+            </div>
+          </div>
+          <div class="pos-count"><span>18</span>人</div>
+        </div>
+
+        <div class="position-card reveal" data-group="editorial">
+          <div class="pos-icon">✍️</div>
+          <div class="pos-info">
+            <h3>編輯組</h3>
+            <p>社群媒體經營（FB / IG / Threads）、文案撰寫、Podcast 製作、創意內容</p>
+            <div class="pos-tags">
+              <span class="tag">文字力</span>
+              <span class="tag">設計美感</span>
+              <span class="tag">影音剪輯</span>
+            </div>
+          </div>
+          <div class="pos-count"><span>3</span>人</div>
+        </div>
+
+        <div class="position-card reveal" data-group="curriculum">
+          <div class="pos-icon">📚</div>
+          <div class="pos-info">
+            <h3>課程活動組</h3>
+            <p>規劃並執行核心課程、黑客松、業界咖啡聊、開源分享、社群博覽會、密室逃脫</p>
+            <div class="pos-tags">
+              <span class="tag">課程設計</span>
+              <span class="tag">活動規劃</span>
+            </div>
+          </div>
+          <div class="pos-count"><span>12</span>人</div>
+        </div>
+
+        <div class="position-card reveal" data-group="design">
+          <div class="pos-icon">🎨</div>
+          <div class="pos-info">
+            <h3>設計組</h3>
+            <p>視覺設計、衣服設計、網頁視覺、學員手冊、簡報模板、社群圖文設計</p>
+            <div class="pos-tags">
+              <span class="tag">平面設計</span>
+              <span class="tag">視覺美學</span>
+            </div>
+          </div>
+          <div class="pos-count"><span>7</span>人</div>
+        </div>
+
+        <div class="position-card reveal" data-group="it">
+          <div class="pos-icon">💻</div>
+          <div class="pos-info">
+            <h3>資訊組</h3>
+            <p>官方網站開發、活動網站、活動系統製作</p>
+            <div class="pos-tags">
+              <span class="tag">HTML/CSS/JS</span>
+              <span class="tag">Git</span>
+              <span class="tag">Astro/Next.js</span>
+            </div>
+          </div>
+          <div class="pos-count"><span>3</span>人</div>
+        </div>
+
+        <div class="position-card reveal" data-group="doc">
+          <div class="pos-icon">📷</div>
+          <div class="pos-info">
+            <h3>紀錄組</h3>
+            <p>攝影紀錄、捕捉重要時刻、基礎修圖</p>
+            <div class="pos-tags">
+              <span class="tag">攝影</span>
+              <span class="tag">修圖</span>
+            </div>
+          </div>
+          <div class="pos-count"><span>3</span>人</div>
+        </div>
+
+        <div class="position-card reveal" data-group="affairs">
+          <div class="pos-icon">📦</div>
+          <div class="pos-info">
+            <h3>庶務組</h3>
+            <p>物資管理、場地佈置、活動後勤支援</p>
+            <div class="pos-tags">
+              <span class="tag">細心</span>
+              <span class="tag">執行力</span>
+            </div>
+          </div>
+          <div class="pos-count"><span>?</span>人</div>
+        </div>
+      </div>
+
+      <p class="recruit-note reveal">
+        詳細職缺說明請參考
+        <a href="https://hackmd.io/@SITCON/2026-camp-recruit" target="_blank" rel="noopener">招募說明文件 ↗</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section id="timeline">
+    <div class="container">
+      <div class="section-label reveal">// schedule</div>
+      <h2 class="section-title reveal">重要時程</h2>
+
+      <div class="timeline">
+        <div class="timeline-item done reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">2026 / 04 / 01</div>
+            <div class="tl-title">一切從這裡開始</div>
+            <div class="tl-desc">工作人員集合，今年的 Camp 從這天正式動起來</div>
+          </div>
+        </div>
+
+        <div class="timeline-item done reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">2026 / 04 / 01</div>
+            <div class="tl-title">工人跳坑開始！</div>
+            <div class="tl-desc">表單開了，坑等你來跳——你在等什麼？</div>
+          </div>
+        </div>
+
+        <div class="timeline-item upcoming reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">TBD</div>
+            <div class="tl-title">工人跳坑截止</div>
+            <div class="tl-desc">表單關了就來不及了，手不要太慢</div>
+          </div>
+        </div>
+
+        <div class="timeline-item upcoming reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">TBD</div>
+            <div class="tl-title">線上籌備開跑</div>
+            <div class="tl-desc">還沒見面沒關係，先在線上把事情推起來</div>
+          </div>
+        </div>
+
+        <div class="timeline-item upcoming reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">TBD</div>
+            <div class="tl-title">工人相見歡 🎉</div>
+            <div class="tl-desc">第一次實體碰面，終於知道對方長什麼樣</div>
+          </div>
+        </div>
+
+        <div class="timeline-item upcoming reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">TBD</div>
+            <div class="tl-title">學員報名開始</div>
+            <div class="tl-desc">輪到學員了！報名資訊屆時公告</div>
+          </div>
+        </div>
+
+        <div class="timeline-item upcoming camp reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">2026 / 07 / 08</div>
+            <div class="tl-title">🏕️ 出發！</div>
+            <div class="tl-desc">五天四夜，陽明交通大學，我們到了</div>
+          </div>
+        </div>
+
+        <div class="timeline-item upcoming reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">2026 / 07 / 12</div>
+            <div class="tl-title">依依不捨，但掰掰</div>
+            <div class="tl-desc">帶著新認識的朋友和滿腦子新東西回家，明年見</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team">
+    <div class="container">
+      <div class="section-label reveal">// team</div>
+      <h2 class="section-title reveal">工作人員</h2>
+      <p class="section-desc reveal">因為有這群人在背後搞事，才有你的五天四夜</p>
+
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <img class="team-avatar" src="https://gravatar.com/avatar/5b168d8b83a4f506cf9be7b9b86b7ffc2b7a8dee29e5f6c82f9720764fc05f4d?s=200&d=identicon" alt="Windless" />
+          <div class="team-info">
+            <div class="team-name">Windless</div>
+            <div class="team-role">總召</div>
+          </div>
+        </div>
+
+        <div class="team-card reveal">
+          <div class="team-avatar">Fe</div>
+          <div class="team-info">
+            <div class="team-name">Fearnot</div>
+            <div class="team-role">副召</div>
+          </div>
+        </div>
+
+        <div class="team-card reveal">
+          <img class="team-avatar" src="https://gravatar.com/avatar/3dc682683048afd1630ae4329b7269a2dc9fa301480a8abe6e974893eba6683d?s=200&d=identicon" alt="Ya" />
+          <div class="team-info">
+            <div class="team-name">Ya</div>
+            <div class="team-role">行政組 組長</div>
+          </div>
+        </div>
+
+        <div class="team-card reveal">
+          <img class="team-avatar" src="https://gravatar.com/avatar/d70fd2f563f5ba351cf00d7aff6c2c0c1a31326ca100b2acff490c7c8f08d2bf?s=200&d=identicon" alt="77" />
+          <div class="team-info">
+            <div class="team-name">77</div>
+            <div class="team-role">隊輔組 組長</div>
+          </div>
+        </div>
+
+        <div class="team-card reveal">
+          <img class="team-avatar" src="https://gravatar.com/avatar/dbfbb99d57882e065243ab549d00d63eabb2dfa8e5ba7d9e7abb1ed0daa2c3f4?s=200&d=identicon" alt="Mina" />
+          <div class="team-info">
+            <div class="team-name">Mina</div>
+            <div class="team-role">編輯組 組長</div>
+          </div>
+        </div>
+
+        <div class="team-card reveal">
+          <img class="team-avatar" src="https://gravatar.com/avatar/ef3e19775d8f5807d5b693288a64cf4b5a6eebaa289bb7628a669a2f22e3faae?s=200&d=identicon" alt="Nathan" />
+          <div class="team-info">
+            <div class="team-name">Nathan</div>
+            <div class="team-role">課程活動組 組長</div>
+          </div>
+        </div>
+
+        <div class="team-card reveal">
+          <img class="team-avatar" src="https://gravatar.com/avatar/cdf78bfb55f7be52400da72e2b780ffc62af848476b998f80bbf287c67b231a7?s=200&d=identicon" alt="Yoru" />
+          <div class="team-info">
+            <div class="team-name">Yoru</div>
+            <div class="team-role">資訊組 組長</div>
+          </div>
+        </div>
+
+        <div class="team-card reveal">
+          <img class="team-avatar" src="https://gravatar.com/avatar/08b25778f9a9ca3f2591b4e859be426dbd075608d763daf4fdd244d48eb26f13?s=200&d=identicon" alt="康喔" />
+          <div class="team-info">
+            <div class="team-name">康喔</div>
+            <div class="team-role">紀錄組 組長</div>
+          </div>
+        </div>
+
+        <div class="team-card reveal placeholder">
+          <div class="team-avatar">?</div>
+          <div class="team-info">
+            <div class="team-name">設計組組長</div>
+            <div class="team-role">設計組 組長</div>
+          </div>
+        </div>
+
+        <div class="team-card reveal">
+          <div class="team-avatar">思</div>
+          <div class="team-info">
+            <div class="team-name">思惟</div>
+            <div class="team-role">庶務組 組長</div>
+          </div>
+        </div>
+
+        <div class="team-card reveal">
+          <img class="team-avatar" src="https://gravatar.com/avatar/6c6c3bed1c257ebdba662b12111724bc96ff804c41936045954acc6b60dc81b5?s=200&d=identicon" alt="Lindy" />
+          <div class="team-info">
+            <div class="team-name">Lindy</div>
+            <div class="team-role">財務組 組長</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="team-note reveal">
+        還有更多人正在跳坑中，名單持續更新
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-sitcon">SITCON</span>
+            <span class="logo-camp">Camp</span>
+            <span class="logo-year">2026</span>
+          </div>
+          <p>學生辦的、給學生玩的資訊科技夏令營</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>快速連結</h4>
+            <ul>
+              <li><a href="https://i.sitcon.org/camp-recruit" target="_blank" rel="noopener">工人招募表單</a></li>
+              <li><a href="https://hackmd.io/@SITCON/2026-camp-recruit" target="_blank" rel="noopener">招募說明文件</a></li>
+              <li><a href="https://sitcon.camp/2025/" target="_blank" rel="noopener">SITCON Camp 2025</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>關注 SITCON</h4>
+            <ul>
+              <li><a href="https://sitcon.org" target="_blank" rel="noopener">SITCON 官網</a></li>
+              <li><a href="https://www.facebook.com/sitcon.camp" target="_blank" rel="noopener">Facebook</a></li>
+              <li><a href="https://www.instagram.com/sitcon.camp" target="_blank" rel="noopener">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 SITCON Camp. Made with ❤️ by SITCON Camp 2026 Staff.</p>
+        <p class="footer-code">// see you at NYCU, 7/8–7/12</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
