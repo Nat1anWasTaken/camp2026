@@ -1,1 +1,34 @@
 @import "tailwindcss";
+
+@theme {
+	--color-paper: #f3ead6;
+	--color-cream: #fff8ea;
+	--color-sand: #c4b9a2;
+	--color-ink: #2a2318;
+	--color-line: #5b4d3b;
+	--color-rust: #c96b33;
+	--color-rust-strong: #a94d1d;
+}
+
+@layer base {
+	html {
+		background: var(--color-paper);
+		color: var(--color-ink);
+	}
+
+	body {
+		background: var(--color-paper);
+		color: var(--color-ink);
+	}
+
+	a {
+		transition:
+			color 150ms ease,
+			background-color 150ms ease,
+			border-color 150ms ease;
+	}
+
+	::selection {
+		background: color-mix(in srgb, var(--color-rust) 35%, transparent);
+	}
+}
