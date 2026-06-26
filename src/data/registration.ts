@@ -19,7 +19,7 @@ export const noticeMarkdown = `1. 第 5 人（含）起將以原價計費。
 2. 提前一晚入住營隊 800 元/人。
 3. 若在 5/17（日）23:59 前報名即享有早鳥價，享有早鳥價者仍可享有團報優惠。
 4. 團體報名不保證全數錄取，團體報名凡錄取者（無論是否全數錄取）皆享有團報優惠價格，詳見[《報名簡章》](https://drive.google.com/file/d/1uY7zWu5NVCQ-gUIVyL_uOFRcOXear0qj/view?usp=drivesdk)。
-5. 本次夏令營預計招收學員 60 名，報名延長至 6/21（日）23:59，採即報即審，額滿為止。
+5. 本次夏令營預計招收學員 60 名，報名已於 6/21（日）23:59 截止。
 6. 正取學員將依審查進度陸續以 Email 通知，並需完成報名費繳交，始完成報名程序。
 7. 另設有補助名額，請詳閱[《報名費用補助辦法》](https://drive.google.com/file/d/1iITmqkfEe6PSXmqeqQMg8cnRg_cbVtgB/view?usp=sharing)。
 8. 關於退費事宜，請見[《退費說明文件》](https://drive.google.com/file/d/1oNsvMLOAJzgJ8GaDm51vKtUIpWNq2poa/view?usp=sharing)。`;

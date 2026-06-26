@@ -18,9 +18,20 @@ export interface ScheduleBlock {
 	eventId: string;
 }
 
+export interface ScheduleSpeaker {
+	id: string;
+	name?: string;
+	description?: string;
+	avatar?: {
+		key?: string;
+		alt?: string;
+	};
+}
+
 export interface ScheduleDay {
 	id: string;
 	title: string[];
+	date: string;
 	subtitle: string;
 	type: ScheduleDayType;
 	blocks: ScheduleBlock[];
@@ -37,12 +48,26 @@ export interface ScheduleEvent {
 		key: string;
 		alt: string;
 	};
+	speakers?: ScheduleSpeaker["id"][];
 }
 
 export const scheduleMeta: ScheduleMeta = {
 	title: "活動日程",
 	description: "SITCON Camp 2026 將圍繞軟體工程、人工智慧與資訊安全三大主線展開，並穿插交流、實作與活動。"
 };
+
+export const scheduleSpeakers: ScheduleSpeaker[] = [
+	{
+		id: "william-mou",
+		name: "William Mou",
+		description:
+			"嗨，我是展佑！我的開發日常是跟電腦底層對話。曾在 Linux Foundation 的 WasmEdge 專案刻過 C/C++ API、在實驗室及 Homelab 建置虛擬機及 Overlay Network，近期在 SiFive 參與 RISC-V CPU 及 AI 加速器的晶片設計及性能最佳化。大學時最瘋狂的經歷是在清大超算隊伍設計 3KW 功耗限制的叢集，贏得兩座世界超級電腦冠軍（SCC22 & ASC20-21）回台灣。\n身為 2019 Camp 的學員，這次回來想和大家聊聊「被 AI 取代」的焦慮，分享資工系那些 Hardcore 的底層知識，如何成為你走過每次技術革命的心法。"
+	},
+	{
+		id: "chieh-ying-li",
+		name: "李杰穎"
+	}
+];
 
 export const scheduleEvents: ScheduleEvent[] = [
 	{
@@ -60,14 +85,19 @@ export const scheduleEvents: ScheduleEvent[] = [
 	{
 		id: "broad-course",
 		name: "廣度課程",
-		summary: "敬請期待...",
-		description: ["即將揭曉..."],
+		summary: "從應用層往下看底層系統與高效能運算，理解 AI 時代仍然重要的資工基礎。",
+		description: [
+			"當 LLM 幾秒鐘就能生成精美的 Web UI、AI 寫 Code 的速度遠超人類，你是否曾看著資工系厚重的「作業系統」、「計算機組織與結構」課本，懷疑起學這些底層理論的意義？這場廣度課程希望帶領已經具備基礎程式能力的你，把目光從喧囂的「應用層」往下切，直達整座資訊世界的地基——底層系統與高效能運算（HPC）。身為曾經坐在台下的 2019 Camp 學員，我想結合近年的實戰經驗，跟大家聊聊：",
+			"- 打破黑盒： 在超級電腦上跑動大型 AI 模型的背後，撐起算力奇蹟的從來不是魔法，而是作業系統與硬體架構的極致調度。那些讓你熬夜趕工的資工必修課，究竟在當代最前沿的技術裡扮演什麼角色？",
+			"- 造浪者的心法： 當寫出會動的 Code 門檻被無限拉低，我們該如何省思資工系帶給我們的思維方式，從單純的技術消費者，蛻變成參與下一次革命的貢獻者？"
+		],
 		category: "其他",
 		isInteractive: true,
 		image: {
 			key: "broad-course",
 			alt: "廣度課程活動現場"
-		}
+		},
+		speakers: ["william-mou", "chieh-ying-li"]
 	},
 	{
 		id: "quest",
@@ -87,11 +117,13 @@ export const scheduleEvents: ScheduleEvent[] = [
 		}
 	},
 	{
-		id: "agent-battle",
-		name: "讓你的 Agent 跟別人的戰鬥吧！",
-		summary: "神秘活動...",
-		description: ["即將揭曉..."],
-		category: "活動",
+		id: "web-system-intro",
+		name: "Web 系統入門",
+		summary: "認識瀏覽器、伺服器與資料庫如何串起一個網站。",
+		description: [
+			"從打開網頁、登入帳號到送出表單，帶學員拆解瀏覽器、伺服器與資料庫之間的互動流程。課程會說明前端如何呈現畫面並送出請求、後端如何接收與處理資料，以及 HTTP、API、Cookie、Session 等概念如何串起常見的網站功能。"
+		],
+		category: "啟程",
 		isInteractive: true,
 		image: {
 			key: "agent-battle",
@@ -246,10 +278,14 @@ export const scheduleEvents: ScheduleEvent[] = [
 	},
 	{
 		id: "sigs-ak",
-		name: "專題圓桌討論會",
-		summary: "課程內的知識固然重要，但課程外的經驗與想法不可忽略，來一場酣暢淋漓的思維討論與碰撞吧。",
+		name: "爐邊夜談",
+		summary: "燈火微暗、宵夜飄香，屬於資訊人的深夜交流正式開張。在這裡沒有講師與學生，只有隨意走動、自由入座，圍繞著技術本質與一線秘辛的深夜閒聊。",
 		description: [
-			"除去軟體工程、資訊安全、人工智慧外，資訊領域還有許多不同的面向，學科之上也有很多經驗與心酸血淚史。在這個活動中，學員會分成不同的興趣小組，以專題為框架，並透過講師、隊輔的輔助，一同對一個領域深入討論與探索，了解資訊宇宙更全面的樣貌。"
+			"白天的課聽不夠？拉張椅子，配著宵夜，我們繼續聊。",
+			"",
+			"承襲以往大受好評的「視界咖啡館」精神，今年的爐邊夜談將帶來更深度的交流。當熱騰騰的宵夜香氣瀰漫，各領域的工作人員將化身各桌的「攤主」。想知道大型語言模型背後的對齊技術怎麼做？好奇業界一線的開發會面對什麼坑？又或者是想聽資安大神分享攻防秘辛？我們帶著你揭開資訊領域的面紗。",
+			"",
+			"在這裡，沒有台上的講師與台下的學生，只有一群對資訊充滿熱情的夥伴。隨意走動，自由入座，最真實的技術知識與靈感，將在深夜的閒聊與宵夜中誕生。 "
 		],
 		category: "活動",
 		isInteractive: true,
@@ -277,12 +313,6 @@ export const scheduleEvents: ScheduleEvent[] = [
 		category: "總結"
 	},
 	{
-		id: "sleep",
-		name: "睡覺",
-		summary: "休息與整備時間。",
-		category: "生活"
-	},
-	{
 		id: "free-chat",
 		name: "回宿 / 自由交流",
 		summary: "和夥伴自由交流，延續課程與活動後的討論。",
@@ -306,7 +336,8 @@ export const scheduleDays: ScheduleDay[] = [
 	{
 		id: "day-one",
 		// Each title item is a wrap unit: keep words together, and only wrap between items when needed.
-		title: ["報到 / 破冰"],
+		title: ["主線課程", "先導日"],
+		date: "7/8",
 		subtitle: "Day 1",
 		type: "opening",
 		blocks: [
@@ -316,13 +347,14 @@ export const scheduleDays: ScheduleDay[] = [
 			{ startSlot: "13:00", span: 2, eventId: "broad-course" },
 			{ startSlot: "15:00", span: 3, eventId: "quest" },
 			{ startSlot: "18:00", eventId: "dinner" },
-			{ startSlot: "19:00", span: 2, eventId: "agent-battle" },
+			{ startSlot: "19:00", span: 2, eventId: "web-system-intro" },
 			{ startSlot: "21:00", eventId: "sigs-ak" }
 		]
 	},
 	{
 		id: "day-two",
-		title: ["軟工"],
+		title: ["軟體工程", "主題日"],
+		date: "7/9",
 		subtitle: "Day 2",
 		type: "software",
 		blocks: [
@@ -336,8 +368,9 @@ export const scheduleDays: ScheduleDay[] = [
 	},
 	{
 		id: "day-three",
-		title: ["ML"],
+		title: ["人工智慧", "主題日"],
 		subtitle: "Day 3",
+		date: "7/10",
 		type: "artificial-intelligence",
 		blocks: [
 			{ startSlot: "9:00", span: 3, eventId: "ml-main" },
@@ -351,7 +384,8 @@ export const scheduleDays: ScheduleDay[] = [
 	},
 	{
 		id: "day-four",
-		title: ["資安"],
+		title: ["資訊安全", "主題日"],
+		date: "7/11",
 		subtitle: "Day 4",
 		type: "security",
 		blocks: [
@@ -366,15 +400,16 @@ export const scheduleDays: ScheduleDay[] = [
 	},
 	{
 		id: "day-five",
-		title: ["收尾"],
+		title: ["資訊交流", "探索日"],
+		date: "7/12",
 		subtitle: "Day 5",
 		type: "closing",
 		blocks: [
-			{ startSlot: "9:00", eventId: "sleep" },
 			{ startSlot: "10:00", eventId: "open-source-sharing" },
 			{ startSlot: "11:00", span: 2, eventId: "community-fair" },
 			{ startSlot: "13:00", span: 2, eventId: "vision-cafe" },
-			{ startSlot: "15:00", span: 2, eventId: "closing" }
+			{ startSlot: "15:00", span: 2, eventId: "closing" },
+			{ startSlot: "17:00", span: 6, eventId: "return-home" }
 		]
 	}
 ];

@@ -97,12 +97,23 @@ const renderedNotice = mdRenderer.render(registration.noticeMarkdown);
 					>
 						{registration.ctaBrochure.label}
 					</a>
-					<a
-						href={registration.cta.href}
-						class="bg-green flex h-14 w-[44vw] max-w-52 items-center justify-center rounded-2xl px-3 text-xl leading-[150%] font-extrabold whitespace-nowrap text-white shadow-[0.25rem_0.25rem_0_0_var(--color-orange)] sm:h-16 sm:w-auto sm:px-4 sm:text-2xl lg:h-18 lg:text-[2.125rem] lg:shadow-[0.5rem_0.5rem_0_0_var(--color-orange)]"
-					>
-						{registration.cta.label}
-					</a>
+					{
+						registration.cta.href ? (
+							<a
+								href={registration.cta.href}
+								class="bg-green flex h-14 w-[44vw] max-w-52 items-center justify-center rounded-2xl px-3 text-xl leading-[150%] font-extrabold whitespace-nowrap text-white shadow-[0.25rem_0.25rem_0_0_var(--color-orange)] sm:h-16 sm:w-auto sm:px-4 sm:text-2xl lg:h-18 lg:text-[2.125rem] lg:shadow-[0.5rem_0.5rem_0_0_var(--color-orange)]"
+							>
+								{registration.cta.label}
+							</a>
+						) : (
+							<span
+								class="bg-foreground/90 flex h-14 w-[44vw] max-w-52 cursor-not-allowed items-center justify-center rounded-2xl px-3 text-xl leading-[150%] font-extrabold whitespace-nowrap text-white shadow-[0.25rem_0.25rem_0_0_var(--color-orange)] sm:h-16 sm:w-auto sm:px-4 sm:text-2xl lg:h-18 lg:text-[2.125rem] lg:shadow-[0.5rem_0.5rem_0_0_var(--color-orange)]"
+								aria-disabled="true"
+							>
+								{registration.cta.label}
+							</span>
+						)
+					}
 				</div>
 			</div>
 		</div>

@@ -34,7 +34,7 @@
 			}
 		],
 		"cta": {
-			"label": "立即報名",
+			"label": "報名截止",
 			"href": "/2026/#registration-info"
 		},
 		"mobileMenu": {
@@ -183,50 +183,50 @@
 				"name": "早鳥優惠",
 				"price": "8900",
 				"priceCurrency": "TWD",
-				"availability": "https://schema.org/InStock",
+				"availability": "https://schema.org/SoldOut",
 				"validFrom": "2026-05-03",
 				"validThrough": "2026-05-17",
-				"url": "https://i.sitcon.org/reg-camp2026"
+				"url": "https://sitcon.camp/2026/#registration-info"
 			},
 			{
 				"@type": "Offer",
 				"name": "個人報名",
 				"price": "9900",
 				"priceCurrency": "TWD",
-				"availability": "https://schema.org/InStock",
+				"availability": "https://schema.org/SoldOut",
 				"validFrom": "2026-05-03",
 				"validThrough": "2026-06-21",
-				"url": "https://i.sitcon.org/reg-camp2026"
+				"url": "https://sitcon.camp/2026/#registration-info"
 			},
 			{
 				"@type": "Offer",
 				"name": "二人團報",
 				"price": "9400",
 				"priceCurrency": "TWD",
-				"availability": "https://schema.org/InStock",
+				"availability": "https://schema.org/SoldOut",
 				"validFrom": "2026-05-03",
 				"validThrough": "2026-06-21",
-				"url": "https://i.sitcon.org/reg-camp2026"
+				"url": "https://sitcon.camp/2026/#registration-info"
 			},
 			{
 				"@type": "Offer",
 				"name": "三人團報",
 				"price": "9100",
 				"priceCurrency": "TWD",
-				"availability": "https://schema.org/InStock",
+				"availability": "https://schema.org/SoldOut",
 				"validFrom": "2026-05-03",
 				"validThrough": "2026-06-21",
-				"url": "https://i.sitcon.org/reg-camp2026"
+				"url": "https://sitcon.camp/2026/#registration-info"
 			},
 			{
 				"@type": "Offer",
 				"name": "四人團報",
 				"price": "8800",
 				"priceCurrency": "TWD",
-				"availability": "https://schema.org/InStock",
+				"availability": "https://schema.org/SoldOut",
 				"validFrom": "2026-05-03",
 				"validThrough": "2026-06-21",
-				"url": "https://i.sitcon.org/reg-camp2026"
+				"url": "https://sitcon.camp/2026/#registration-info"
 			}
 		],
 		"audience": {

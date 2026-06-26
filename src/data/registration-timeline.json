@@ -11,15 +11,9 @@
 			"iconKey": "campaign"
 		},
 		{
-			"date": "即日起",
-			"label": "即報即審 額滿為止",
-			"iconKey": "alarm",
-			"highlight": true
-		},
-		{
 			"date": "06/21 23:59",
-			"label": "延長報名截止",
-			"iconKey": "rocket"
+			"label": "報名已截止",
+			"iconKey": "alarm"
 		},
 		{
 			"date": "07/08 – 07/12",

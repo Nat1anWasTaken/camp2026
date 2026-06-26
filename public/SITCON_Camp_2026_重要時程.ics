@@ -11,8 +11,8 @@ UID:sitcon-camp-2026-early-bird-deadline@sitcon.camp
 DTSTART;TZID=Asia/Taipei:20260517T235900
 DTEND;TZID=Asia/Taipei:20260518T000000
 SUMMARY:🎯 SITCON Camp 2026 早鳥報名截止
-URL:https://i.sitcon.org/reg-camp2026
-DESCRIPTION:SITCON Camp 2026 早鳥報名截止時間。\n報名連結：https://i.sitcon.org/reg-camp2026
+URL:https://sitcon.camp/2026/
+DESCRIPTION:SITCON Camp 2026 早鳥報名截止時間。\n活動網站：https://sitcon.camp/2026/
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:🎯 SITCON Camp 2026 早鳥報名截止
@@ -38,9 +38,9 @@ DTSTAMP:20260601T000000Z
 UID:sitcon-camp-2026-rolling-review@sitcon.camp
 DTSTART;VALUE=DATE:20260601
 DTEND;VALUE=DATE:20260622
-SUMMARY:⚡ SITCON Camp 2026 即報即審 額滿為止
-URL:https://i.sitcon.org/reg-camp2026
-DESCRIPTION:SITCON Camp 2026 延長報名期間採即報即審，至 6/21 23:59 或額滿為止。\n報名連結：https://i.sitcon.org/reg-camp2026
+SUMMARY:⚡ SITCON Camp 2026 報名已截止
+URL:https://sitcon.camp/2026/
+DESCRIPTION:SITCON Camp 2026 報名已截止。\n活動網站：https://sitcon.camp/2026/
 END:VEVENT
 BEGIN:VEVENT
 DTSTAMP:20260601T000000Z
@@ -48,8 +48,8 @@ UID:sitcon-camp-2026-registration-deadline@sitcon.camp
 DTSTART;TZID=Asia/Taipei:20260621T235900
 DTEND;TZID=Asia/Taipei:20260622T000000
 SUMMARY:🚨 SITCON Camp 2026 延長報名截止
-URL:https://i.sitcon.org/reg-camp2026
-DESCRIPTION:SITCON Camp 2026 延長報名截止時間。採即報即審，額滿為止。\n報名連結：https://i.sitcon.org/reg-camp2026
+URL:https://sitcon.camp/2026/
+DESCRIPTION:SITCON Camp 2026 延長報名截止時間。報名已截止。\n活動網站：https://sitcon.camp/2026/
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:🚨 SITCON Camp 2026 延長報名截止

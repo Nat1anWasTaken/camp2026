@@ -105,7 +105,7 @@ const items = timelineData.items.map(item => ({
 		<!-- 桌機：節點清單 -->
 		<ul class="hidden list-none p-0 md:flex md:flex-row md:items-start md:justify-between" style="padding-right:var(--end)" aria-label="報名重要時程">
 			{
-				items.map(({ date, label, icon: Icon, highlight }, index) => (
+				items.map(({ date, label, icon: Icon }, index) => (
 					<li class="relative flex flex-col items-center text-center">
 						{index === items.length - 1 && (
 							<div class="absolute -top-22 left-1/2 z-30 flex -translate-x-1/2 flex-col items-center">
@@ -168,8 +168,8 @@ const items = timelineData.items.map(item => ({
 						<div class="bg-soft-blue/40" style="width:0.125rem;height:var(--stem)" />
 						<div class="bg-soft-blue relative z-10 rounded-full" style="width:var(--marker);height:var(--marker)" />
 						<div class="mt-4 flex max-w-50 flex-col gap-1.5">
-							<span class:list={["text-base leading-tight font-extrabold whitespace-pre-line lg:text-[1.2rem]", highlight ? "text-orange" : "text-background opacity-60"]}>{date}</span>
-							<span class:list={["text-lg leading-snug font-extrabold lg:text-[1.4rem]", highlight ? "text-orange" : "text-background"]}>{label}</span>
+							<span class="text-background text-base leading-tight font-extrabold whitespace-pre-line opacity-60 lg:text-[1.2rem]">{date}</span>
+							<span class="text-background text-lg leading-snug font-extrabold lg:text-[1.4rem]">{label}</span>
 						</div>
 					</li>
 				))
@@ -183,14 +183,14 @@ const items = timelineData.items.map(item => ({
 
 			<ul class="flex list-none flex-col gap-7 p-0 sm:gap-10" style="padding-left:var(--rail)" aria-label="報名重要時程">
 				{
-					items.map(({ date, label, icon: Icon, highlight }) => (
+					items.map(({ date, label, icon: Icon }) => (
 						<li class="flex items-center gap-6" style="margin-left:calc(var(--mdot) / -2)">
 							<div class="bg-soft-blue relative z-10 flex shrink-0 items-center justify-center rounded-full text-white" style="width:var(--mdot);height:var(--mdot)">
 								<Icon class="h-[55%] w-[55%]" aria-hidden="true" />
 							</div>
 							<div class="flex flex-col gap-1.5">
-								<span class:list={["text-2xl leading-tight font-extrabold whitespace-pre-line", highlight ? "text-orange" : "text-background opacity-60"]}>{date}</span>
-								<span class:list={["text-3xl leading-snug font-extrabold", highlight ? "text-orange" : "text-background"]}>{label}</span>
+								<span class="text-background text-2xl leading-tight font-extrabold whitespace-pre-line opacity-60">{date}</span>
+								<span class="text-background text-3xl leading-snug font-extrabold">{label}</span>
 							</div>
 						</li>
 					))

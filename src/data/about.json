@@ -641,6 +641,12 @@
 						"role": "特別感謝",
 						"description": "Google for Developers 支持開發者社群與技術學習。",
 						"iconPath": "/organizer-brand/google-for-developer.svg"
+					},
+					{
+						"name": "NCSE Network",
+						"role": "特別感謝",
+						"description": "NCSE Network 支持本次營隊辦理。",
+						"iconPath": "/organizer-brand/ncse.svg"
 					}
 				]
 			}
