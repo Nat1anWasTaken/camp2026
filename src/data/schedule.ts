@@ -169,6 +169,13 @@ export const scheduleEvents: ScheduleEvent[] = [
 		}
 	},
 	{
+		id: "ml-broad",
+		name: "人工智慧廣度課程",
+		summary: "從更廣的視角認識人工智慧，建立對領域全貌的整體理解。",
+		category: "其他",
+		isInteractive: true
+	},
+	{
 		id: "security-main",
 		name: "資安主線課程",
 		summary: "從攻防視角理解系統安全與資安思維。",
@@ -376,9 +383,9 @@ export const scheduleDays: ScheduleDay[] = [
 			{ startSlot: "9:00", span: 3, eventId: "ml-main" },
 			{ startSlot: "12:00", eventId: "lunch" },
 			{ startSlot: "13:00", span: 3, eventId: "ml-main" },
-			{ startSlot: "16:00", span: 2, eventId: "heisenbug" },
-			{ startSlot: "18:00", eventId: "dinner" },
-			{ startSlot: "19:00", span: 2, eventId: "ml-main" },
+			{ startSlot: "16:00", eventId: "ml-broad" },
+			{ startSlot: "17:00", eventId: "dinner" },
+			{ startSlot: "18:00", span: 3, eventId: "ml-main" },
 			{ startSlot: "21:00", eventId: "sigs-ak" }
 		]
 	},
