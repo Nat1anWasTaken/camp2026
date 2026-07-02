@@ -4,6 +4,7 @@ import SitconBrand from "@/assets/organizer-brand/sitcon.svg";
 import GoogleForDevelopersBrand from "@/assets/organizer-brand/google-for-developer.svg";
 import NycuCsBrand from "@/assets/organizer-brand/nycu-cs.svg";
 import OcfBrand from "@/assets/organizer-brand/ocf.svg";
+import CloudflareBrand from "@/assets/organizer-brand/cloudflare.svg";
 import homeData from "@/data/home.json";
 
 const { brandMarquee } = homeData;
@@ -11,7 +12,8 @@ const brandAssets: Record<string, ImageMetadata> = {
 	sitcon: SitconBrand,
 	ocf: OcfBrand,
 	nycuCs: NycuCsBrand,
-	googleForDevelopers: GoogleForDevelopersBrand
+	googleForDevelopers: GoogleForDevelopersBrand,
+	cloudflare: CloudflareBrand
 };
 const brands = brandMarquee.brands.map(brand => ({
 	...brand,

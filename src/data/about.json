@@ -643,6 +643,12 @@
 						"iconPath": "/organizer-brand/google-for-developer.svg"
 					},
 					{
+						"name": "Cloudflare",
+						"role": "特別感謝",
+						"description": "Cloudflare 支持本次營隊辦理。",
+						"iconPath": "/organizer-brand/cloudflare.svg"
+					},
+					{
 						"name": "NCSE Network",
 						"role": "特別感謝",
 						"description": "NCSE Network 支持本次營隊辦理。",
