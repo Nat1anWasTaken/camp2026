@@ -51,6 +51,28 @@ export interface ScheduleEvent {
 	speakers?: ScheduleSpeaker["id"][];
 }
 
+export type ScheduleCategoryId = "journey" | "main-course" | "activity" | "life" | "other" | "closing";
+
+export interface ScheduleCategory {
+	id: ScheduleCategoryId;
+	label: ScheduleEventCategory;
+	theme: string;
+}
+
+export type ScheduleEventLegacy = Omit<ScheduleEvent, "category" | "speakers"> & {
+	categoryId: ScheduleCategoryId;
+	speakers?: ScheduleEvent["speakers"];
+};
+
+export type ScheduleData = {
+	meta: ScheduleMeta;
+	slots: ScheduleSlot[];
+	events: Array<ScheduleEvent | ScheduleEventLegacy>;
+	days: ScheduleDay[];
+	categories?: ScheduleCategory[];
+	speakers: ScheduleSpeaker[];
+};
+
 export const scheduleMeta: ScheduleMeta = {
 	title: "活動日程",
 	description: "SITCON Camp 2026 將圍繞軟體工程、人工智慧與資訊安全三大主線展開，並穿插交流、實作與活動。"
