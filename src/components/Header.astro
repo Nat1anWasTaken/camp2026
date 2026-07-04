@@ -282,6 +282,10 @@ const { header } = layoutData;
 </script>
 
 <style>
+	:global(html[data-hide-navbar]) .site-header {
+		display: none !important;
+	}
+
 	.site-header {
 		position: fixed;
 		inset-block-start: clamp(0.45rem, 1vw, 0.8rem);

@@ -35,6 +35,27 @@ const seoData = {
 <!doctype html>
 <html lang={pageDocument.lang}>
 	<head>
+		<script is:inline>
+			(() => {
+				const syncNavbarVisibility = () => {
+					const params = new URLSearchParams(window.location.search);
+					const rawValue = params.get("hideNav") ?? params.get("hide-nav");
+					const shouldHideNavbar = rawValue !== null && !["0", "false", "no", "off"].includes(rawValue.toLowerCase());
+
+					document.documentElement.toggleAttribute("data-hide-navbar", shouldHideNavbar);
+				};
+
+				window.__syncNavbarVisibility = syncNavbarVisibility;
+				syncNavbarVisibility();
+
+				if (!window.__syncNavbarVisibilityBound) {
+					document.addEventListener("astro:page-load", () => {
+						window.__syncNavbarVisibility?.();
+					});
+					window.__syncNavbarVisibilityBound = true;
+				}
+			})();
+		</script>
 		<!-- Google Tag Manager -->
 		<script define:vars={{ gtmId: pageDocument.gtmId }} is:inline>
 			(function (w, d, s, l, i) {
