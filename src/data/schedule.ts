@@ -64,8 +64,14 @@ export const scheduleSpeakers: ScheduleSpeaker[] = [
 			"嗨，我是展佑！我的開發日常是跟電腦底層對話。曾在 Linux Foundation 的 WasmEdge 專案刻過 C/C++ API、在實驗室及 Homelab 建置虛擬機及 Overlay Network，近期在 SiFive 參與 RISC-V CPU 及 AI 加速器的晶片設計及性能最佳化。大學時最瘋狂的經歷是在清大超算隊伍設計 3KW 功耗限制的叢集，贏得兩座世界超級電腦冠軍（SCC22 & ASC20-21）回台灣。\n身為 2019 Camp 的學員，這次回來想和大家聊聊「被 AI 取代」的焦慮，分享資工系那些 Hardcore 的底層知識，如何成為你走過每次技術革命的心法。"
 	},
 	{
-		id: "chieh-ying-li",
-		name: "李杰穎"
+		id: "jayin",
+		name: "李杰穎",
+		description:
+			"嗨嗨大家我是杰穎，我目前同時在軟體公司擔任軟體工程師，一邊在陽明交大就讀博士班。我從高中時期就對於電腦視覺、影像生成、3D 渲染相關的研究和技術相當感興趣，並在高中的時候獲得旺宏科學獎的旺宏獎，上大學後也持續投稿論文至國際頂尖會議如 SIGGRAPH, ECCV, CVPR, CoRL 等。身為 2019 SITCON Camp 的學員，這次回來想要跟大家分享的是我從高中到現在大學畢業觀察到 AI 技術在這幾年的發展，為什麼影像生成模型可以在兩三年內突飛猛進、the bitter lesson 如何影響電腦視覺和電腦圖學的研究、coding agent 又怎麼改變了大家開發或是做研究的方式、在這個時代什麼問題是真正重要，可以改變世界的、在資訊領域下一個十年的研究主題會是什麼？",
+		avatar: {
+			key: "jayin",
+			alt: "李杰穎"
+		}
 	}
 ];
 
@@ -97,7 +103,7 @@ export const scheduleEvents: ScheduleEvent[] = [
 			key: "broad-course",
 			alt: "廣度課程活動現場"
 		},
-		speakers: ["william-mou", "chieh-ying-li"]
+		speakers: ["william-mou", "jayin"]
 	},
 	{
 		id: "quest",
