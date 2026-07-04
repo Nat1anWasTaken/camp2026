@@ -37,8 +37,16 @@ const seoData = {
 	<head>
 		<script is:inline>
 			(() => {
-				const isEnabledParam = (params, camelName, kebabName) => {
-					const rawValue = params.get(camelName) ?? params.get(kebabName);
+				const isEnabledParam = (params, ...names) => {
+					const normalizedNames = names.map(name => name.toLowerCase());
+					let rawValue = null;
+
+					for (const [key, value] of params) {
+						if (normalizedNames.includes(key.toLowerCase())) {
+							rawValue = value;
+							break;
+						}
+					}
 
 					return rawValue !== null && !["0", "false", "no", "off"].includes(rawValue.toLowerCase());
 				};
