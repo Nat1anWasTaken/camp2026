@@ -17,6 +17,7 @@ SITCON Camp 2026 官方網站。專案使用 Astro 建置靜態頁面，搭配 T
 
 ```bash
 pnpm install
+git submodule update --init --recursive
 ```
 
 2. 啟動開發伺服器
@@ -52,3 +53,10 @@ git config core.hooksPath .githooks
 - 顏色請使用 `src/styles/global.css` 中定義的 theme token。
 - Icon 優先使用 `unplugin-icons` 套件的 [`ic`](https://icon-sets.iconify.design/ic/) 和 [`lucide`](https://icon-sets.iconify.design/lucide/) 圖示集。
 - 動畫可依需求使用 GSAP 或 Anime.js。
+
+## 課表資料
+
+- 課表資料來源為 [SITCON Camp 2026 官網課表資料](https://docs.google.com/spreadsheets/d/15pM9usBziCsqUDLlSwCbpd5Bqao6vo_TzMwgGJDb2FQ/edit?usp=sharing)。
+- Google Sheet tab schema 參考 `vendor/schedule-json-generator` submodule。
+- `pnpm schedule:generate` 透過 unauthenticated Google Visualization endpoint 讀取資料，因此該 Sheet 需要設定為「知道連結的使用者可以檢視」。
+- 官網預覽需要的分類、日期、圖片與顏色等呈現設定仍保留在 [src/lib/schedule.ts](src/lib/schedule.ts)。
