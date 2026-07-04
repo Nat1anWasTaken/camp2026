@@ -37,16 +37,21 @@ const seoData = {
 	<head>
 		<script is:inline>
 			(() => {
-				const syncNavbarVisibility = () => {
-					const params = new URLSearchParams(window.location.search);
-					const rawValue = params.get("hideNav") ?? params.get("hide-nav");
-					const shouldHideNavbar = rawValue !== null && !["0", "false", "no", "off"].includes(rawValue.toLowerCase());
+				const isEnabledParam = (params, camelName, kebabName) => {
+					const rawValue = params.get(camelName) ?? params.get(kebabName);
 
-					document.documentElement.toggleAttribute("data-hide-navbar", shouldHideNavbar);
+					return rawValue !== null && !["0", "false", "no", "off"].includes(rawValue.toLowerCase());
 				};
 
-				window.__syncNavbarVisibility = syncNavbarVisibility;
-				syncNavbarVisibility();
+				const syncChromeVisibility = () => {
+					const params = new URLSearchParams(window.location.search);
+
+					document.documentElement.toggleAttribute("data-hide-navbar", isEnabledParam(params, "hideNav", "hide-nav"));
+					document.documentElement.toggleAttribute("data-hide-footer", isEnabledParam(params, "hideFooter", "hide-footer"));
+				};
+
+				window.__syncNavbarVisibility = syncChromeVisibility;
+				syncChromeVisibility();
 
 				if (!window.__syncNavbarVisibilityBound) {
 					document.addEventListener("astro:page-load", () => {

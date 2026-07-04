@@ -62,6 +62,10 @@
 	body > footer {
 		margin-top: auto;
 	}
+
+	html[data-hide-footer] body > footer {
+		display: none !important;
+	}
 }
 
 @layer utilities {
