@@ -3,6 +3,7 @@ import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 import IcRoundChevronRight from "~icons/ic/round-chevron-right";
 import homeData from "@/data/home.json";
+import { renderMarkdownInline } from "@/utils/markdown";
 
 const { masterClassSection, masterClasses } = homeData;
 
@@ -125,11 +126,11 @@ const getMasterImage = (masterClass: MasterClassItem) => {
 													{masterClass.speakers.map(speaker => (
 														<div class="topic-card__speaker">
 															<p class="topic-card__instructor">{speaker.instructor}</p>
-															<p class="topic-card__achievement">{speaker.achievement}</p>
+															<p class="topic-card__achievement" set:html={renderMarkdownInline(speaker.achievement)} />
 															{masterClass.speakers.length === 1 && (
 																<ul class="topic-card__profile" aria-label={`${speaker.instructor} 講師履歷亮點`}>
 																	{speaker.profile.map(item => (
-																		<li>{item}</li>
+																		<li set:html={renderMarkdownInline(item)} />
 																	))}
 																</ul>
 															)}
@@ -206,10 +207,10 @@ const getMasterImage = (masterClass: MasterClassItem) => {
 												{masterClass.speakers.map(speaker => (
 													<div class="course-slide__speaker-card">
 														<h3 class="course-slide__instructor">{speaker.instructor}</h3>
-														<p class="course-slide__achievement">{speaker.achievement}</p>
+														<p class="course-slide__achievement" set:html={renderMarkdownInline(speaker.achievement)} />
 														<ul class="course-slide__profile" aria-label={`${speaker.instructor} 講師履歷亮點`}>
 															{speaker.profile.map(item => (
-																<li>{item}</li>
+																<li set:html={renderMarkdownInline(item)} />
 															))}
 														</ul>
 													</div>
@@ -685,6 +686,32 @@ const getMasterImage = (masterClass: MasterClassItem) => {
 		border-radius: 62.4375rem;
 		background: var(--master-accent);
 		content: "";
+	}
+
+	.topic-card__achievement :global(a),
+	.topic-card__profile :global(a),
+	.course-slide__achievement :global(a),
+	.course-slide__profile :global(a) {
+		color: inherit;
+		text-decoration: underline;
+		text-decoration-thickness: 0.1em;
+		text-underline-offset: 0.16em;
+	}
+
+	.topic-card__achievement :global(a:hover),
+	.topic-card__profile :global(a:hover),
+	.course-slide__achievement :global(a:hover),
+	.course-slide__profile :global(a:hover) {
+		text-decoration-thickness: 0.16em;
+	}
+
+	.topic-card__achievement :global(a:focus-visible),
+	.topic-card__profile :global(a:focus-visible),
+	.course-slide__achievement :global(a:focus-visible),
+	.course-slide__profile :global(a:focus-visible) {
+		outline: 2px solid currentColor;
+		outline-offset: 0.2em;
+		border-radius: 0.1em;
 	}
 
 	.master-carousel {
