@@ -9,6 +9,7 @@ declare module "markdown-it" {
 		constructor(options?: Record<string, unknown>);
 		parse(src: string, env: Record<string, unknown>): Token[];
 		render(src: string): string;
+		renderInline(src: string): string;
 	}
 
 	export default MarkdownIt;

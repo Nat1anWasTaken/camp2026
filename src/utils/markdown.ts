@@ -1,6 +1,6 @@
 import MarkdownIt from "markdown-it";
 
-const md = new MarkdownIt({ linkify: true });
+const md = new MarkdownIt({ html: false, linkify: true });
 
 type MarkdownToken = ReturnType<MarkdownIt["parse"]>[number];
 
@@ -15,5 +15,7 @@ const collectPlainText = (tokens: MarkdownToken[]): string[] =>
 	});
 
 export const renderMarkdown = (text: string) => md.render(text);
+
+export const renderMarkdownInline = (text: string) => md.renderInline(text);
 
 export const markdownToPlainText = (text: string) => collectPlainText(md.parse(text, {})).join(" ").replace(/\s+/g, " ").trim();

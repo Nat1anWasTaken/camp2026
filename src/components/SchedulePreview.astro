@@ -5,6 +5,7 @@ import Info from "~icons/lucide/info";
 import X from "~icons/lucide/x";
 import type { ScheduleBlock, ScheduleDay, ScheduleDayType, ScheduleEvent, ScheduleEventCategory } from "@/data/schedule";
 import { scheduleDays, scheduleEvents, scheduleMeta, scheduleSlots } from "@/data/schedule";
+import { renderMarkdownInline } from "@/utils/markdown";
 
 const scheduleImageModules = import.meta.glob<{ default: ImageMetadata }>("../assets/schedule/*.{jpg,jpeg,png,webp}", { eager: true });
 const scheduleImages = new Map(
@@ -260,7 +261,7 @@ const getRenderableBlocks = (day: ScheduleDay) => {
 								<p class="schedule-dialog__description">
 									{descriptionLines.map((line, index) => (
 										<>
-											{line}
+											<span set:html={renderMarkdownInline(line)} />
 											{index < descriptionLines.length - 1 && <br />}
 										</>
 									))}
@@ -948,6 +949,23 @@ const getRenderableBlocks = (day: ScheduleDay) => {
 		font-size: clamp(1rem, 1.6vw, 1.18rem);
 		font-weight: 700;
 		line-height: 1.75;
+	}
+
+	.schedule-dialog__description :global(a) {
+		color: inherit;
+		text-decoration: underline;
+		text-decoration-thickness: 0.1em;
+		text-underline-offset: 0.16em;
+	}
+
+	.schedule-dialog__description :global(a:hover) {
+		text-decoration-thickness: 0.16em;
+	}
+
+	.schedule-dialog__description :global(a:focus-visible) {
+		outline: 2px solid currentColor;
+		outline-offset: 0.2em;
+		border-radius: 0.1em;
 	}
 
 	.schedule-dialog__close {
